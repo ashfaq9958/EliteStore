@@ -13,8 +13,8 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/user/Header";
+import Footer from "@/components/user/Footer";
 
 const Checkout = () => {
   const [step, setStep] = useState(1);

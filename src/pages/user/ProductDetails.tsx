@@ -1,13 +1,27 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw } from "lucide-react";
+import {
+  Star,
+  ShoppingCart,
+  Heart,
+  Share2,
+  Truck,
+  Shield,
+  RotateCcw,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/user/Header";
+import Footer from "@/components/user/Footer";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -24,7 +38,8 @@ const ProductDetails = () => {
     rating: 4.8,
     reviews: 234,
     images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-    description: "Experience premium sound quality with these luxury wireless headphones. Featuring active noise cancellation, premium materials, and up to 30 hours of battery life.",
+    description:
+      "Experience premium sound quality with these luxury wireless headphones. Featuring active noise cancellation, premium materials, and up to 30 hours of battery life.",
     features: [
       "Active Noise Cancellation",
       "30-hour battery life",
@@ -33,11 +48,11 @@ const ProductDetails = () => {
       "High-resolution audio",
     ],
     specifications: {
-      "Weight": "250g",
+      Weight: "250g",
       "Battery Life": "30 hours",
       "Charging Time": "2 hours",
       "Frequency Response": "20Hz - 40kHz",
-      "Impedance": "32 ohms",
+      Impedance: "32 ohms",
     },
     sizes: ["Small", "Medium", "Large"],
     colors: ["Black", "White", "Silver"],
@@ -46,7 +61,7 @@ const ProductDetails = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
@@ -98,7 +113,7 @@ const ProductDetails = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-3xl font-bold">${product.price}</span>
                 {product.originalPrice && (
@@ -106,7 +121,9 @@ const ProductDetails = () => {
                     ${product.originalPrice}
                   </span>
                 )}
-                <Badge variant="destructive">Save ${(product.originalPrice! - product.price).toFixed(2)}</Badge>
+                <Badge variant="destructive">
+                  Save ${(product.originalPrice! - product.price).toFixed(2)}
+                </Badge>
               </div>
             </div>
 
@@ -124,7 +141,9 @@ const ProductDetails = () => {
                   </SelectTrigger>
                   <SelectContent>
                     {product.sizes.map((size) => (
-                      <SelectItem key={size} value={size}>{size}</SelectItem>
+                      <SelectItem key={size} value={size}>
+                        {size}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -150,8 +169,13 @@ const ProductDetails = () => {
               </div>
 
               <div>
-                <label className="text-sm font-medium mb-2 block">Quantity</label>
-                <Select value={quantity.toString()} onValueChange={(value) => setQuantity(parseInt(value))}>
+                <label className="text-sm font-medium mb-2 block">
+                  Quantity
+                </label>
+                <Select
+                  value={quantity.toString()}
+                  onValueChange={(value) => setQuantity(parseInt(value))}
+                >
                   <SelectTrigger className="w-24">
                     <SelectValue />
                   </SelectTrigger>
@@ -180,7 +204,7 @@ const ProductDetails = () => {
                   <Share2 className="h-5 w-5" />
                 </Button>
               </div>
-              
+
               <Button variant="premium" size="lg" className="w-full">
                 Buy Now
               </Button>
@@ -193,27 +217,33 @@ const ProductDetails = () => {
                   <Truck className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium text-sm">Free Shipping</p>
-                    <p className="text-xs text-muted-foreground">On orders over $100</p>
+                    <p className="text-xs text-muted-foreground">
+                      On orders over $100
+                    </p>
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardContent className="flex items-center gap-3 p-4">
                   <Shield className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium text-sm">2 Year Warranty</p>
-                    <p className="text-xs text-muted-foreground">Full coverage</p>
+                    <p className="text-xs text-muted-foreground">
+                      Full coverage
+                    </p>
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardContent className="flex items-center gap-3 p-4">
                   <RotateCcw className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium text-sm">30-Day Returns</p>
-                    <p className="text-xs text-muted-foreground">Hassle-free returns</p>
+                    <p className="text-xs text-muted-foreground">
+                      Hassle-free returns
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -229,7 +259,7 @@ const ProductDetails = () => {
               <TabsTrigger value="specifications">Specifications</TabsTrigger>
               <TabsTrigger value="reviews">Reviews</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="features" className="mt-6">
               <Card>
                 <CardContent className="p-6">
@@ -245,35 +275,46 @@ const ProductDetails = () => {
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="specifications" className="mt-6">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Technical Specifications</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    Technical Specifications
+                  </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between py-2 border-b">
-                        <span className="font-medium">{key}</span>
-                        <span className="text-muted-foreground">{value}</span>
-                      </div>
-                    ))}
+                    {Object.entries(product.specifications).map(
+                      ([key, value]) => (
+                        <div
+                          key={key}
+                          className="flex justify-between py-2 border-b"
+                        >
+                          <span className="font-medium">{key}</span>
+                          <span className="text-muted-foreground">{value}</span>
+                        </div>
+                      )
+                    )}
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="reviews" className="mt-6">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Customer Reviews</h3>
-                  <p className="text-muted-foreground">Reviews coming soon...</p>
+                  <h3 className="text-xl font-semibold mb-4">
+                    Customer Reviews
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Reviews coming soon...
+                  </p>
                 </CardContent>
               </Card>
             </TabsContent>
           </Tabs>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
