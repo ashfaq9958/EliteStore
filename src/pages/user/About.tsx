@@ -311,7 +311,8 @@ const About: React.FC = () => {
         {/* Partners */}
         <section className="space-y-6 animate-fade-in">
           <h2 className="text-2xl font-semibold">Trusted by leading brands</h2>
-          <PartnersCarousel partners={partners} />
+          {/* <PartnersCarousel partners={partners} /> */}
+          <PartnersCarousel />
         </section>
       </main>
     </>

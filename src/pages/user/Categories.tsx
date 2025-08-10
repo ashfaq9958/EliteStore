@@ -263,7 +263,7 @@ const Categories = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* <Header /> */}
 
       <main className="container mx-auto px-4 py-12">
         {/* Breadcrumb */}
@@ -410,7 +410,7 @@ const Categories = () => {
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

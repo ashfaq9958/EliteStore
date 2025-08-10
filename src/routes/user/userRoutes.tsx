@@ -1,4 +1,3 @@
-import UserLayout from "@/layouts/UserLayout";
 import type { RouteObject } from "react-router-dom";
 import { withSuspense } from "@/utils/WithSuspence";
 import {
@@ -10,10 +9,11 @@ import {
   Contact,
   Checkout,
   Categories,
+  UserLayout,
   ProductDetails,
 } from "@/routes/lazyRoutes/lazyRoutes";
 
-const userRoutes: RouteObject = {
+export const userRoutes: RouteObject = {
   path: "/",
   element: withSuspense(<UserLayout />),
   children: [
@@ -29,4 +29,3 @@ const userRoutes: RouteObject = {
   ],
 };
 
-export default userRoutes;
