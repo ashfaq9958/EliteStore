@@ -30,63 +30,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import PartnersCarousel from "@/components/about/PartnersCarousel";
 import AboutStorySection from "@/components/about/Story";
 
-const setSEO = () => {
-  const title = "About EliteStore | Our Story & Team";
-  const description =
-    "Discover EliteStore's mission, values, team, milestones, and partners. Premium shopping with trust and innovation.";
-  document.title = title;
-
-  const ensureTag = (selector: string, create: () => HTMLElement) => {
-    let el = document.head.querySelector(selector) as HTMLElement | null;
-    if (!el) {
-      el = create();
-      document.head.appendChild(el);
-    }
-    return el;
-  };
-
-  const metaDesc = ensureTag('meta[name="description"]', () => {
-    const m = document.createElement("meta");
-    m.setAttribute("name", "description");
-    return m;
-  }) as HTMLMetaElement;
-  metaDesc.setAttribute("content", description);
-
-  const linkCanonical = ensureTag('link[rel="canonical"]', () => {
-    const l = document.createElement("link");
-    l.setAttribute("rel", "canonical");
-    return l;
-  }) as HTMLLinkElement;
-  linkCanonical.setAttribute("href", `${window.location.origin}/about`);
-
-  // Structured data (AboutPage + Organization)
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    name: "About EliteStore",
-    url: `${window.location.origin}/about`,
-    mainEntity: {
-      "@type": "Organization",
-      name: "EliteStore",
-      url: window.location.origin,
-      logo: `${window.location.origin}/favicon.ico`,
-      sameAs: [
-        "https://facebook.com/elitestore",
-        "https://twitter.com/elitestore",
-        "https://instagram.com/elitestore",
-        "https://www.linkedin.com/company/elitestore",
-      ],
-    },
-  };
-  const existing = document.getElementById("ld-about");
-  if (existing) existing.remove();
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.id = "ld-about";
-  script.text = JSON.stringify(jsonLd);
-  document.head.appendChild(script);
-};
-
 const values = [
   {
     icon: <HeartHandshake className="h-5 w-5" />,
@@ -149,10 +92,6 @@ const partners = [
 ];
 
 const About: React.FC = () => {
-  useEffect(() => {
-    setSEO();
-  }, []);
-
   return (
     <>
       <header className="relative">

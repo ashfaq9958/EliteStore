@@ -18,7 +18,7 @@ const ProtectedRoute = ({
   //     return <Navigate to="/unthorized" replace />;
   //   }
   if (!userRole || !allowedRoles.includes(userRole)) {
-    return <Navigate to="/unthorized" replace />;
+    return <Navigate to="/unauthorized" replace />;
   }
 
   return <>{children}</>;

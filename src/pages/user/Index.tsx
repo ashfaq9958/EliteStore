@@ -21,8 +21,6 @@ import { Badge } from "@/components/ui/badge";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* <Header /> */}
-
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
@@ -371,8 +369,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -54,67 +54,6 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-const setSEO = () => {
-  const title = "Contact Us | EliteStore";
-  const description =
-    "Contact EliteStore for product questions, orders, or support. Reach us via email, phone, or the contact form.";
-  document.title = title;
-
-  const ensureTag = (selector: string, create: () => HTMLElement) => {
-    let el = document.head.querySelector(selector) as HTMLElement | null;
-    if (!el) {
-      el = create();
-      document.head.appendChild(el);
-    }
-    return el;
-  };
-
-  const metaDesc = ensureTag('meta[name="description"]', () => {
-    const m = document.createElement("meta");
-    m.setAttribute("name", "description");
-    return m;
-  }) as HTMLMetaElement;
-  metaDesc.setAttribute("content", description);
-
-  const linkCanonical = ensureTag('link[rel="canonical"]', () => {
-    const l = document.createElement("link");
-    l.setAttribute("rel", "canonical");
-    return l;
-  }) as HTMLLinkElement;
-  linkCanonical.setAttribute("href", `${window.location.origin}/contact`);
-
-  // Structured data (ContactPage + Organization)
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    name: "Contact EliteStore",
-    url: `${window.location.origin}/contact`,
-    mainEntity: {
-      "@type": "Organization",
-      name: "EliteStore",
-      url: window.location.origin,
-      contactPoint: [
-        {
-          "@type": "ContactPoint",
-          contactType: "customer support",
-          email: "support@elitestore.com",
-          telephone: "+1 (555) 123-4567",
-          areaServed: "Worldwide",
-          availableLanguage: ["English"],
-        },
-      ],
-    },
-  };
-
-  const existing = document.getElementById("ld-contact");
-  if (existing) existing.remove();
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.id = "ld-contact";
-  script.text = JSON.stringify(jsonLd);
-  document.head.appendChild(script);
-};
-
 const Contact: React.FC = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -122,10 +61,6 @@ const Contact: React.FC = () => {
     mode: "onTouched",
   });
   const { toast } = useToast();
-
-  useEffect(() => {
-    setSEO();
-  }, []);
 
   const onSubmit = async (values: FormValues) => {
     try {

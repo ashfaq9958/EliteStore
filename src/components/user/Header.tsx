@@ -9,11 +9,22 @@ import {
   Heart,
   Moon,
   Sun,
+  HelpCircle,
+  LogIn,
+  Package,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useTheme } from "next-themes";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,9 +108,46 @@ const Header = () => {
             </Link>
 
             {/* User Account */}
-            <Button variant="ghost" size="icon">
-              <User className="h-4 w-4" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Account menu">
+                  <User className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <Link to="/shop" className="flex items-center gap-2">
+                    <User className="h-4 w-4" />
+                    <span>Profile</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/shop" className="flex items-center gap-2">
+                    <Heart className="h-4 w-4" />
+                    <span>Wishlist</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/shop" className="flex items-center gap-2">
+                    <Package  className="h-4 w-4" />
+                    <span>Orders</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/faq" className="flex items-center gap-2">
+                    <HelpCircle className="h-4 w-4" />
+                    <span>Setting</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <LogIn className="h-4 w-4 mr-2" />
+                  <span>Sign in</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* Mobile Menu Toggle */}
             <Button
@@ -108,7 +156,11 @@ const Header = () => {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              {isMenuOpen ? (
+                <X className="h-4 w-4" />
+              ) : (
+                <Menu className="h-4 w-4" />
+              )}
             </Button>
           </div>
         </div>
