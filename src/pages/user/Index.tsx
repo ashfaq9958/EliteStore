@@ -12,13 +12,14 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/user/Header";
-import Footer from "@/components/user/Footer";
 import heroImage from "@/assets/hero-banner.jpg";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { useTheme } from "next-themes";
 
 const Index = () => {
+  const { theme } = useTheme();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -28,8 +29,12 @@ const Index = () => {
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-
-        <div className="absolute inset-0 bg-black/40" />
+        <div
+          // onClick={handleToggleTheme}
+          className={`${
+            theme === "light" ? "bg-black/10" : "bg-black/40"
+          } absolute inset-0`}
+        />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Premium Shopping
