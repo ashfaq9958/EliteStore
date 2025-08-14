@@ -13,58 +13,22 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-banner.jpg";
+import heroImage2 from "@/assets/banner2.jpg";
+import heroImage3 from "@/assets/banner.jpg";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useTheme } from "next-themes";
+import HeroCarousel from "@/components/heroCarousel/HeroCarousel";
 
 const Index = () => {
   const { theme } = useTheme();
 
+  const images = [heroImage, heroImage3, heroImage2];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src={heroImage}
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div
-          className={`${
-            theme === "light" ? "bg-black/10" : "bg-black/40"
-          } absolute inset-0`}
-        />
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Premium Shopping
-            <span className="block bg-gradient-hero bg-clip-text text-transparent">
-              Experience
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Discover luxury products with exceptional quality and unmatched
-            elegance
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/shop">
-              <Button variant="hero" size="lg">
-                <ShoppingBag className="mr-2 h-5 w-5" />
-                Shop Now
-              </Button>
-            </Link>
-            <Link to="/admin">
-              <Button
-                // variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-black"
-              >
-                Admin Panel
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      <HeroCarousel theme={theme} heroImages={images} />
       {/* Free Shipping Banner */}
       <section className="bg-gradient-to-r from-primary to-primary-glow py-3">
         <div className="container mx-auto px-4">
