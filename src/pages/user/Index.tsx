@@ -30,7 +30,6 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div
-          // onClick={handleToggleTheme}
           className={`${
             theme === "light" ? "bg-black/10" : "bg-black/40"
           } absolute inset-0`}
