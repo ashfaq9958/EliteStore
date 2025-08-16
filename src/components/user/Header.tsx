@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between gap-4">
+        <div className="flex h-16 items-center justify-between gap-2 sm:gap-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center">
@@ -56,14 +56,16 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                className={`text-sm sm:text-base font-medium transition-colors hover:text-primary ${
+                  isActive(item.href)
+                    ? "text-primary"
+                    : "text-muted-foreground"
                 }`}
               >
                 {item.name}
@@ -71,22 +73,21 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Search Bar */}
-          <div className="hidden lg:flex flex-1 max-w-sm mx-6">
+          {/* Search (desktop) */}
+          <div className="hidden lg:flex flex-1 max-w-sm mx-4">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input placeholder="Search products..." className="pl-10 pr-4" />
             </div>
           </div>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-2">
-            {/* Theme Toggle */}
+          {/* Right Side */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            {/* Theme toggle */}
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="relative"
             >
               <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -107,7 +108,7 @@ const Header = () => {
               </Button>
             </Link>
 
-            {/* User Account */}
+            {/* User Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Account menu">
@@ -131,14 +132,14 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/shop" className="flex items-center gap-2">
-                    <Package  className="h-4 w-4" />
+                    <Package className="h-4 w-4" />
                     <span>Orders</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/faq" className="flex items-center gap-2">
                     <HelpCircle className="h-4 w-4" />
-                    <span>Setting</span>
+                    <span>Settings</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -156,16 +157,12 @@ const Header = () => {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? (
-                <X className="h-4 w-4" />
-              ) : (
-                <Menu className="h-4 w-4" />
-              )}
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden border-t py-4 space-y-4">
             {/* Mobile Search */}
@@ -174,15 +171,15 @@ const Header = () => {
               <Input placeholder="Search products..." className="pl-10" />
             </div>
 
-            {/* Mobile Navigation Links */}
+            {/* Mobile Links */}
             <nav className="flex flex-col gap-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-2 py-1 text-sm font-medium transition-colors hover:text-primary ${
+                  className={`px-2 py-2 text-sm font-medium rounded transition-colors hover:bg-primary/10 ${
                     isActive(item.href)
-                      ? "text-primary"
+                      ? "bg-primary/20 text-primary"
                       : "text-muted-foreground"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
