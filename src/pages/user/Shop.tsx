@@ -21,8 +21,8 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
 import c4 from "@/assets/carosuel/c4.jpg";
-import c5 from "@/assets/carosuel/c5.jpg";
-import c7 from "@/assets/carosuel/c7.jpg";
+import c2 from "@/assets/carosuel/c2.jpg";
+import c3 from "@/assets/carosuel/c3.jpg";
 import c6 from "@/assets/carosuel/c6.jpg";
 import c1 from "@/assets/carosuel/c1.jpg";
 import HeroCarousel from "@/components/heroCarousel/HeroCarousel";
@@ -84,7 +84,7 @@ const Shop = () => {
       heading: "Effortless Style, Everyday Confidence",
       subHeading:
         "Discover versatile outfits that balance sharp tailoring with all-day ease—perfect for work, weekends, and beyond.",
-      img: c1,
+      img: c2,
       cta: "Shop Men’s Collection",
     },
     {
@@ -97,6 +97,12 @@ const Shop = () => {
       heading: "Trendy Comfort For Kids",
       subHeading: "Fun, stylish, and comfy looks for every kid’s adventure.",
       img: c6,
+      cta: "Shop Kids’ Collection",
+    },
+    {
+      heading: "Trendy Comfort For Kids",
+      subHeading: "Fun, stylish, and comfy looks for every kid’s adventure.",
+      img: c3,
       cta: "Shop Kids’ Collection",
     },
   ];
