@@ -83,7 +83,7 @@ const Shop = () => {
     {
       heading: "Effortless Style, Everyday Confidence",
       subHeading:
-        "Discover versatile outfits that balance sharp tailoring with all-day ease—perfect for work, weekends, and beyond.",
+        "Discover Smart, versatile looks for work, weekends, and beyond.",
       img: c2,
       cta: "Shop Men’s Collection",
     },
@@ -95,16 +95,16 @@ const Shop = () => {
     },
     {
       heading: "Trendy Comfort For Kids",
-      subHeading: "Fun, stylish, and comfy looks for every kid’s adventure.",
+        subHeading: "Stylish. Comfy. Adventure-ready.",
       img: c6,
       cta: "Shop Kids’ Collection",
     },
     {
       heading: "Redefine Your Wardrobe Today",
       subHeading:
-        "Find the perfect balance of comfort, quality, and style with our handpicked menswear edit.",
+        "Handpicked menswear blending comfort, quality, and style.",
       img: c3,
-      cta: "Upgrade Your Look",
+      cta: "Upgrade Your Wardrobe",
     },
   ];
 

@@ -40,7 +40,7 @@ export default function ShopCarousel({ heroImages }) {
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-12">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg mb-3 sm:mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white drop-shadow-lg mb-3 sm:mb-4">
                 {img.heading}
               </h1>
               <p className="text-base sm:text-lg md:text-2xl text-white/90 max-w-md sm:max-w-xl md:max-w-2xl mb-6 sm:mb-8 leading-relaxed">
