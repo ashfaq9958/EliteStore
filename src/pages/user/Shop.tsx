@@ -100,10 +100,11 @@ const Shop = () => {
       cta: "Shop Kids’ Collection",
     },
     {
-      heading: "Trendy Comfort For Kids",
-      subHeading: "Fun, stylish, and comfy looks for every kid’s adventure.",
+      heading: "Redefine Your Wardrobe Today",
+      subHeading:
+        "Find the perfect balance of comfort, quality, and style with our handpicked menswear edit.",
       img: c3,
-      cta: "Shop Kids’ Collection",
+      cta: "Upgrade Your Look",
     },
   ];
 
