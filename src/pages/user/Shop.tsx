@@ -20,8 +20,13 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
-import Header from "@/components/user/Header";
-import Footer from "@/components/user/Footer";
+import c4 from "@/assets/carosuel/c4.jpg";
+import c5 from "@/assets/carosuel/c5.jpg";
+import c7 from "@/assets/carosuel/c7.jpg";
+import c6 from "@/assets/carosuel/c6.jpg";
+import c1 from "@/assets/carosuel/c1.jpg";
+import HeroCarousel from "@/components/heroCarousel/HeroCarousel";
+import ShopCarousel from "@/components/shopCarousel/ShopCarousel";
 
 const products = [
   {
@@ -73,13 +78,35 @@ const Shop = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("featured");
 
+  // const images = [c4, c5, c7, c6];
+  const image = [
+    {
+      heading: "Effortless Style, Everyday Confidence",
+      subHeading:
+        "Discover versatile outfits that balance sharp tailoring with all-day ease—perfect for work, weekends, and beyond.",
+      img: c1,
+      cta: "Shop Men’s Collection",
+    },
+    {
+      heading: "Elevate Your Reading Experience",
+      subHeading: "Bring stories to life with our next-gen VR headsets.",
+      img: c4,
+      cta: "Explore Now",
+    },
+    {
+      heading: "Trendy Comfort For Kids",
+      subHeading: "Fun, stylish, and comfy looks for every kid’s adventure.",
+      img: c6,
+      cta: "Shop Kids’ Collection",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
-      {/* <Header /> */}
-
+      <ShopCarousel heroImages={image} />
       <div className="container mx-auto px-4 py-12">
         {/* Breadcrumb */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -91,9 +118,9 @@ const Shop = () => {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-        </div>
+        </div> */}
         {/* Page Header */}
-        <div className="text-center mb-14">
+        {/* <div className="text-center mb-14">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             Shop All Products
           </h1>
@@ -101,10 +128,10 @@ const Shop = () => {
             Explore our curated selection of high-quality, premium products
             designed to elevate your lifestyle.
           </p>
-        </div>
+        </div> */}
 
         {/* Filters and Search */}
-        <div className="flex flex-col lg:flex-row gap-4 mb-8">
+        {/* <div className="flex flex-col lg:flex-row gap-4 mb-8">
           <div className="flex-1">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
@@ -154,7 +181,7 @@ const Shop = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Products Grid */}
         <div
@@ -228,8 +255,6 @@ const Shop = () => {
           ))}
         </div>
       </div>
-
-      {/* <Footer /> */}
     </div>
   );
 };

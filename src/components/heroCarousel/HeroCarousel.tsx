@@ -7,11 +7,9 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import { ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import sale from "@/assets/sale.png";
-import heroImage2 from "@/assets/banner2.jpg";
 
 interface HeroCarouselProps {
-  theme: string;
+  theme?: string;
   heroImages: string[];
 }
 
