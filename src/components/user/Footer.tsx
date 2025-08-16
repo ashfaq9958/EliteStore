@@ -13,8 +13,10 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-card border-t text-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -25,18 +27,62 @@ const Footer = () => {
               quality and unmatched elegance.
             </p>
             <div className="flex space-x-4">
-              <Button variant="outline" size="icon">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon">
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon">
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon">
-                <Youtube className="h-4 w-4" />
-              </Button>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="transition-transform hover:scale-110"
+                >
+                  <Facebook className="h-4 w-4" />
+                </Button>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="transition-transform hover:scale-110"
+                >
+                  <Twitter className="h-4 w-4" />
+                </Button>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="transition-transform hover:scale-110"
+                >
+                  <Instagram className="h-4 w-4" />
+                </Button>
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="transition-transform hover:scale-110"
+                >
+                  <Youtube className="h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -120,12 +166,20 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               Subscribe to get updates on new products and exclusive offers.
             </p>
-            <div className="flex gap-2 items-center">
-              <Input placeholder="Enter your email" className="flex-1" />
-              <Button variant="premium" size="sm">
+            <form
+              className="flex gap-2 items-center"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1"
+                required
+              />
+              <Button variant="premium" size="sm" type="submit">
                 Subscribe
               </Button>
-            </div>
+            </form>
 
             <div className="space-y-3 pt-4">
               <h5 className="font-medium">Contact Info</h5>
@@ -150,7 +204,9 @@ const Footer = () => {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; 2025 EliteStore. All rights reserved.</p>
+          <p className="text-center md:text-left">
+            &copy; {currentYear} EliteStore. All rights reserved.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="#" className="hover:text-foreground transition-colors">
               Privacy Policy
