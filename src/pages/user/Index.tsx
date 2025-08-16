@@ -23,12 +23,34 @@ import HeroCarousel from "@/components/heroCarousel/HeroCarousel";
 const Index = () => {
   const { theme } = useTheme();
 
-  const images = [heroImage, heroImage3, heroImage2];
+  const images = [heroImage, heroImage2];
+
+  const slidingImage = [
+    {
+      heading: "Premium Shopping",
+      secondHeading: "Experience",
+      primarySubHeading:
+        "Discover luxury products with exceptional quality and unmatched elegance",
+      secondarySubHeading: "on premium collections. Limited time only!",
+      img: heroImage,
+      firstCta: "Shop Now",
+      secondCta: "Admin Panel",
+    },
+    {
+      heading: "Exclusive Prestige",
+      secondHeading: "Savings",
+      primarySubHeading: "50% OFF",
+      secondarySubHeading: "• Premium Collections • Limited Time",
+      img: heroImage2,
+      firstCta: "Shop the Sale",
+      secondCta: " View Deals",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <HeroCarousel theme={theme} heroImages={images} />
+      <HeroCarousel theme={theme} heroImages={slidingImage} />
       {/* Free Shipping Banner */}
       <section className="bg-gradient-to-r from-primary to-primary-glow py-2 sm:py-3">
         <div className="container mx-auto px-3 sm:px-4">
