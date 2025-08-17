@@ -33,8 +33,10 @@ export default function ShopCarousel({ heroImages }) {
 
             {/* Overlay */}
             <div
-              className={`absolute inset-0 transition-colors duration-500 ${
-                theme === "light" ? "bg-black/30" : "bg-black/50"
+              className={`absolute inset-0 ${
+                theme === "light"
+                  ? "bg-gradient-to-b from-black/40 via-black/30 to-black/50"
+                  : "bg-gradient-to-b from-black/70 via-black/60 to-black/80"
               }`}
             />
 

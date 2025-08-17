@@ -266,7 +266,7 @@ const Shop = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
                 {/* Discount Badge */}
