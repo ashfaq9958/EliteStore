@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-banner.jpg";
 import heroImage2 from "@/assets/banner2.jpg";
+import heroImage3 from "@/assets/banner3.jpg";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useTheme } from "next-themes";
@@ -42,6 +43,16 @@ const Index = () => {
       firstCta: "Shop the Sale",
       secondCta: " View Deals",
     },
+   {
+  heading: "Autumn Trend Collection",
+  // secondHeading: "Edit",
+  primarySubHeading: "Discover cozy layers and fresh looks in a limited drop",
+  // secondarySubHeading: "• Fresh Fits • Urban Vibes •",
+  img: heroImage3,
+  firstCta: "Discover Styles",
+  secondCta: "Shop Collection",
+}
+
   ];
 
   return (

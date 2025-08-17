@@ -49,7 +49,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">𝑬</span>
+              <span className="text-white font-bold text-lg">E</span>
             </div>
             <span className="hidden sm:inline-block text-xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
               EliteStore
