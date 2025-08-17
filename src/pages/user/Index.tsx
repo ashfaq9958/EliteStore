@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-banner.jpg";
 import heroImage2 from "@/assets/banner2.jpg";
-import heroImage3 from "@/assets/banner.jpg";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useTheme } from "next-themes";
@@ -22,8 +21,6 @@ import HeroCarousel from "@/components/heroCarousel/HeroCarousel";
 
 const Index = () => {
   const { theme } = useTheme();
-
-  const images = [heroImage, heroImage2];
 
   const slidingImage = [
     {

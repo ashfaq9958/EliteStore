@@ -7,6 +7,7 @@ import {
   Twitter,
   Instagram,
   Youtube,
+  Linkedin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,7 +29,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.linkedin.com/in/ashfaqahmad99/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -38,7 +39,22 @@ const Footer = () => {
                   size="icon"
                   className="transition-transform hover:scale-110"
                 >
-                  <Facebook className="h-4 w-4" />
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+              </a>
+
+              <a
+                href="https://www.instagram.com/yusufkhan.845/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="transition-transform hover:scale-110"
+                >
+                  <Instagram className="h-4 w-4" />
                 </Button>
               </a>
               <a
@@ -53,20 +69,6 @@ const Footer = () => {
                   className="transition-transform hover:scale-110"
                 >
                   <Twitter className="h-4 w-4" />
-                </Button>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="transition-transform hover:scale-110"
-                >
-                  <Instagram className="h-4 w-4" />
                 </Button>
               </a>
               <a

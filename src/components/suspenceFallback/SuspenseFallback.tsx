@@ -13,7 +13,7 @@ export default function SuspenseFallback() {
           {/* Brand Logo / Title */}
           <div className="flex items-center gap-2 text-2xl font-semibold tracking-wide">
             <ShoppingBag className="h-6 w-6 text-primary animate-pulse" />
-            NiorHaus &amp; Co.
+            Elite Store
           </div>
 
           {/* Loader */}
