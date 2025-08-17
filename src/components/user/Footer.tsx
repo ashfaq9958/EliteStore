@@ -116,6 +116,12 @@ const Footer = () => {
               >
                 Checkout
               </Link>
+              <Link
+                to="/faq"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                FAQ
+              </Link>
             </nav>
           </div>
 
