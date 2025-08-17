@@ -138,8 +138,8 @@ const Shop = () => {
         </div> */}
 
         {/* Filters and Search */}
-        {/* <div className="flex flex-col lg:flex-row gap-4 mb-8">
-          <div className="flex-1">
+        <div className="flex flex-col lg:flex-row gap-4 mb-8 justify-end    ">
+          {/* <div className="flex-1">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
@@ -149,7 +149,7 @@ const Shop = () => {
                 className="pl-10"
               />
             </div>
-          </div>
+          </div> */}
 
           <div className="flex gap-2">
             <Select value={sortBy} onValueChange={setSortBy}>
@@ -188,7 +188,7 @@ const Shop = () => {
               </Button>
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* Products Grid */}
         <div
