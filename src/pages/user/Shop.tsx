@@ -48,50 +48,122 @@ import watch from "@/assets/watch.jpg";
 
 import ShopCarousel from "@/components/shopCarousel/ShopCarousel";
 
-const products = [
-  {
-    id: 1,
-    name: "Premium Wireless Headphones",
-    price: 299.99,
-    originalPrice: 399.99,
-    image: headphone,
-    category: "Electronics",
-    rating: 4.8,
-    reviews: 234,
-    sale: true,
-  },
-  {
-    id: 2,
-    name: "Luxury Leather Jacket",
-    price: 599.99,
-    image: jacket,
-    category: "Fashion",
-    rating: 4.9,
-    reviews: 156,
-    sale: false,
-  },
-  {
-    id: 3,
-    name: "Smart Fitness Watch",
-    price: 249.99,
-    originalPrice: 329.99,
-    image: watch,
-    category: "Electronics",
-    rating: 4.7,
-    reviews: 89,
-    sale: true,
-  },
-  {
-    id: 4,
-    name: "Designer Sunglasses",
-    price: 189.99,
-    image: glasses,
-    category: "Accessories",
-    rating: 4.6,
-    reviews: 67,
-    sale: false,
-  },
-];
+ const products = [
+    {
+      id: 1,
+      name: "Premium Wireless Headphones",
+      price: 299.99,
+      originalPrice: 399.99,
+      image: headphone,
+      category: "Electronics",
+      rating: 4.8,
+      reviews: 234,
+      sale: true,
+      stock: 45,
+      description:
+        "Experience crystal-clear sound with deep bass and active noise cancellation. Perfect for travel, work, and everyday listening.",
+      features: [
+        "Active Noise Cancellation",
+        "Bluetooth 5.2 Connectivity",
+        "Built-in Microphone for Calls",
+        "Comfortable Over-Ear Design",
+      ],
+      sizes: [], // Not applicable
+      colors: ["Black", "Silver", "Blue"],
+      specifications: {
+        Weight: "250g",
+        "Battery Life": "30 hours",
+        "Charging Time": "2 hours",
+        "Frequency Response": "20Hz - 40kHz",
+        Impedance: "32 ohms",
+      },
+    },
+    {
+      id: 2,
+      name: "Luxury Leather Jacket",
+      price: 599.99,
+      image: jacket,
+      category: "Fashion",
+      rating: 4.9,
+      reviews: 156,
+      sale: false,
+      stock: 20,
+      description:
+        "Crafted from premium genuine leather, this timeless jacket offers style, comfort, and durability for all occasions.",
+      features: [
+        "100% Genuine Leather",
+        "Breathable Lining",
+        "Slim-Fit Tailoring",
+        "Durable Zippers and Buttons",
+      ],
+      sizes: ["S", "M", "L", "XL"],
+      colors: ["Black", "Brown"],
+      specifications: {
+        Material: "Genuine Leather",
+        "Lining Material": "Polyester",
+        Weight: "1.2kg",
+        Fit: "Slim Fit",
+        Care: "Dry Clean Only",
+      },
+    },
+    {
+      id: 3,
+      name: "Smart Fitness Watch",
+      price: 249.99,
+      originalPrice: 329.99,
+      image: watch,
+      category: "Electronics",
+      rating: 4.7,
+      reviews: 89,
+      sale: true,
+      stock: 60,
+      description:
+        "Stay on top of your health with advanced fitness tracking, heart rate monitoring, and sleek design for everyday wear.",
+      features: [
+        "Heart Rate & Sleep Monitoring",
+        "Water Resistant (5 ATM)",
+        "GPS Tracking",
+        "Customizable Watch Faces",
+      ],
+      sizes: [], // Not applicable
+      colors: ["Black", "Silver", "Rose Gold"],
+      specifications: {
+        Weight: "80g",
+        "Battery Life": "7 days",
+        "Charging Time": "1.5 hours",
+        Display: "1.4-inch AMOLED",
+        Connectivity: "Bluetooth, GPS",
+      },
+    },
+    {
+      id: 4,
+      name: "Designer Sunglasses",
+      price: 189.99,
+      image: glasses,
+      category: "Accessories",
+      rating: 4.6,
+      reviews: 67,
+      sale: false,
+      stock: 35,
+      description:
+        "Elevate your look with UV-protected designer sunglasses that blend modern style with ultimate eye protection.",
+      features: [
+        "100% UV Protection",
+        "Scratch-Resistant Lenses",
+        "Lightweight Frame",
+        "Includes Carry Case & Cloth",
+      ],
+      sizes: ["One Size"],
+      colors: ["Black", "Gold", "Tortoise"],
+      specifications: {
+        Weight: "120g",
+        Material: "Polycarbonate Lenses, Metal Frame",
+        Protection: "UV400",
+        FrameWidth: "140mm",
+        LensWidth: "58mm",
+      },
+    },
+  ];
 
 const Shop = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");

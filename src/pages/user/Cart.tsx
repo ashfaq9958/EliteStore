@@ -53,11 +53,13 @@ const Cart = () => {
 
   if (cartItems.length === 0) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background flex flex-col">
         {/* <Header /> */}
-        <div className="container mx-auto px-4 py-16 text-center">
+        <div className="container mx-auto px-4 py-16 text-center flex-1">
           <ShoppingCart className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-          <h1 className="text-2xl font-bold mb-2">Your cart is empty</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+            Your cart is empty
+          </h1>
           <p className="text-muted-foreground mb-8">
             Start shopping to add items to your cart
           </p>
@@ -67,38 +69,51 @@ const Cart = () => {
             </Button>
           </Link>
         </div>
+        {/* <Footer /> */}
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* <Header /> */}
 
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
+      <div className="container mx-auto px-4 py-8 flex-1">
+        <h1 className="text-2xl sm:text-3xl font-extrabold mb-8 tracking-tight">
+          Shopping Cart
+        </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {cartItems.map((item) => (
-              <Card key={item.id}>
-                <CardContent className="p-6">
-                  <div className="flex gap-4">
+              <Card
+                key={item.id}
+                className="hover:shadow-lg transition-shadow duration-200"
+              >
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    {/* Product Image */}
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-24 h-24 object-cover rounded-lg"
+                      className="w-full sm:w-28 h-28 object-cover rounded-lg border"
                     />
 
-                    <div className="flex-1">
-                      <h3 className="font-semibold mb-2">{item.name}</h3>
-                      <div className="flex gap-4 text-sm text-muted-foreground mb-4">
-                        <span>Size: {item.size}</span>
-                        <span>Color: {item.color}</span>
+                    {/* Product Info */}
+                    <div className="flex-1 flex flex-col justify-between">
+                      <div>
+                        <h3 className="font-semibold text-lg sm:text-xl mb-2">
+                          {item.name}
+                        </h3>
+                        <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-4">
+                          <span>Size: {item.size}</span>
+                          <span>Color: {item.color}</span>
+                        </div>
                       </div>
 
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        {/* Quantity Controls */}
                         <div className="flex items-center gap-2">
                           <Button
                             variant="outline"
@@ -134,8 +149,9 @@ const Cart = () => {
                           </Button>
                         </div>
 
+                        {/* Price + Remove */}
                         <div className="flex items-center gap-4">
-                          <span className="font-semibold">
+                          <span className="font-semibold text-lg">
                             ${(item.price * item.quantity).toFixed(2)}
                           </span>
                           <Button
@@ -144,7 +160,7 @@ const Cart = () => {
                             onClick={() => removeItem(item.id)}
                             className="text-destructive hover:text-destructive"
                           >
-                            <Trash2 className="h-4 w-4" />
+                            <Trash2 className="h-5 w-5" />
                           </Button>
                         </div>
                       </div>
@@ -157,11 +173,11 @@ const Cart = () => {
 
           {/* Order Summary */}
           <div className="lg:col-span-1">
-            <Card>
+            <Card className="shadow-md">
               <CardContent className="p-6">
-                <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+                <h2 className="text-xl font-bold mb-4">Order Summary</h2>
 
-                <div className="space-y-2 mb-4">
+                <div className="space-y-2 mb-4 text-sm sm:text-base">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
                     <span>${subtotal.toFixed(2)}</span>
@@ -180,7 +196,7 @@ const Cart = () => {
 
                 <Separator className="my-4" />
 
-                <div className="flex justify-between text-lg font-semibold mb-6">
+                <div className="flex justify-between text-lg font-bold mb-6">
                   <span>Total</span>
                   <span>${total.toFixed(2)}</span>
                 </div>
