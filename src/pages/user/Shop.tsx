@@ -48,122 +48,122 @@ import watch from "@/assets/watch.jpg";
 
 import ShopCarousel from "@/components/shopCarousel/ShopCarousel";
 
- const products = [
-    {
-      id: 1,
-      name: "Premium Wireless Headphones",
-      price: 299.99,
-      originalPrice: 399.99,
-      image: headphone,
-      category: "Electronics",
-      rating: 4.8,
-      reviews: 234,
-      sale: true,
-      stock: 45,
-      description:
-        "Experience crystal-clear sound with deep bass and active noise cancellation. Perfect for travel, work, and everyday listening.",
-      features: [
-        "Active Noise Cancellation",
-        "Bluetooth 5.2 Connectivity",
-        "Built-in Microphone for Calls",
-        "Comfortable Over-Ear Design",
-      ],
-      sizes: [], // Not applicable
-      colors: ["Black", "Silver", "Blue"],
-      specifications: {
-        Weight: "250g",
-        "Battery Life": "30 hours",
-        "Charging Time": "2 hours",
-        "Frequency Response": "20Hz - 40kHz",
-        Impedance: "32 ohms",
-      },
+const products = [
+  {
+    id: 1,
+    name: "Premium Wireless Headphones",
+    price: 299.99,
+    originalPrice: 399.99,
+    image: headphone,
+    category: "Electronics",
+    rating: 4.8,
+    reviews: 234,
+    sale: true,
+    stock: 45,
+    description:
+      "Experience crystal-clear sound with deep bass and active noise cancellation. Perfect for travel, work, and everyday listening.",
+    features: [
+      "Active Noise Cancellation",
+      "Bluetooth 5.2 Connectivity",
+      "Built-in Microphone for Calls",
+      "Comfortable Over-Ear Design",
+    ],
+    sizes: [], // Not applicable
+    colors: ["Black", "Silver", "Blue"],
+    specifications: {
+      Weight: "250g",
+      "Battery Life": "30 hours",
+      "Charging Time": "2 hours",
+      "Frequency Response": "20Hz - 40kHz",
+      Impedance: "32 ohms",
     },
-    {
-      id: 2,
-      name: "Luxury Leather Jacket",
-      price: 599.99,
-      image: jacket,
-      category: "Fashion",
-      rating: 4.9,
-      reviews: 156,
-      sale: false,
-      stock: 20,
-      description:
-        "Crafted from premium genuine leather, this timeless jacket offers style, comfort, and durability for all occasions.",
-      features: [
-        "100% Genuine Leather",
-        "Breathable Lining",
-        "Slim-Fit Tailoring",
-        "Durable Zippers and Buttons",
-      ],
-      sizes: ["S", "M", "L", "XL"],
-      colors: ["Black", "Brown"],
-      specifications: {
-        Material: "Genuine Leather",
-        "Lining Material": "Polyester",
-        Weight: "1.2kg",
-        Fit: "Slim Fit",
-        Care: "Dry Clean Only",
-      },
+  },
+  {
+    id: 2,
+    name: "Luxury Leather Jacket",
+    price: 599.99,
+    image: jacket,
+    category: "Fashion",
+    rating: 4.9,
+    reviews: 156,
+    sale: false,
+    stock: 20,
+    description:
+      "Crafted from premium genuine leather, this timeless jacket offers style, comfort, and durability for all occasions.",
+    features: [
+      "100% Genuine Leather",
+      "Breathable Lining",
+      "Slim-Fit Tailoring",
+      "Durable Zippers and Buttons",
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Black", "Brown"],
+    specifications: {
+      Material: "Genuine Leather",
+      "Lining Material": "Polyester",
+      Weight: "1.2kg",
+      Fit: "Slim Fit",
+      Care: "Dry Clean Only",
     },
-    {
-      id: 3,
-      name: "Smart Fitness Watch",
-      price: 249.99,
-      originalPrice: 329.99,
-      image: watch,
-      category: "Electronics",
-      rating: 4.7,
-      reviews: 89,
-      sale: true,
-      stock: 60,
-      description:
-        "Stay on top of your health with advanced fitness tracking, heart rate monitoring, and sleek design for everyday wear.",
-      features: [
-        "Heart Rate & Sleep Monitoring",
-        "Water Resistant (5 ATM)",
-        "GPS Tracking",
-        "Customizable Watch Faces",
-      ],
-      sizes: [], // Not applicable
-      colors: ["Black", "Silver", "Rose Gold"],
-      specifications: {
-        Weight: "80g",
-        "Battery Life": "7 days",
-        "Charging Time": "1.5 hours",
-        Display: "1.4-inch AMOLED",
-        Connectivity: "Bluetooth, GPS",
-      },
+  },
+  {
+    id: 3,
+    name: "Smart Fitness Watch",
+    price: 249.99,
+    originalPrice: 329.99,
+    image: watch,
+    category: "Electronics",
+    rating: 4.7,
+    reviews: 89,
+    sale: true,
+    stock: 60,
+    description:
+      "Stay on top of your health with advanced fitness tracking, heart rate monitoring, and sleek design for everyday wear.",
+    features: [
+      "Heart Rate & Sleep Monitoring",
+      "Water Resistant (5 ATM)",
+      "GPS Tracking",
+      "Customizable Watch Faces",
+    ],
+    sizes: [], // Not applicable
+    colors: ["Black", "Silver", "Rose Gold"],
+    specifications: {
+      Weight: "80g",
+      "Battery Life": "7 days",
+      "Charging Time": "1.5 hours",
+      Display: "1.4-inch AMOLED",
+      Connectivity: "Bluetooth, GPS",
     },
-    {
-      id: 4,
-      name: "Designer Sunglasses",
-      price: 189.99,
-      image: glasses,
-      category: "Accessories",
-      rating: 4.6,
-      reviews: 67,
-      sale: false,
-      stock: 35,
-      description:
-        "Elevate your look with UV-protected designer sunglasses that blend modern style with ultimate eye protection.",
-      features: [
-        "100% UV Protection",
-        "Scratch-Resistant Lenses",
-        "Lightweight Frame",
-        "Includes Carry Case & Cloth",
-      ],
-      sizes: ["One Size"],
-      colors: ["Black", "Gold", "Tortoise"],
-      specifications: {
-        Weight: "120g",
-        Material: "Polycarbonate Lenses, Metal Frame",
-        Protection: "UV400",
-        FrameWidth: "140mm",
-        LensWidth: "58mm",
-      },
+  },
+  {
+    id: 4,
+    name: "Designer Sunglasses",
+    price: 189.99,
+    image: glasses,
+    category: "Accessories",
+    rating: 4.6,
+    reviews: 67,
+    sale: false,
+    stock: 35,
+    description:
+      "Elevate your look with UV-protected designer sunglasses that blend modern style with ultimate eye protection.",
+    features: [
+      "100% UV Protection",
+      "Scratch-Resistant Lenses",
+      "Lightweight Frame",
+      "Includes Carry Case & Cloth",
+    ],
+    sizes: ["One Size"],
+    colors: ["Black", "Gold", "Tortoise"],
+    specifications: {
+      Weight: "120g",
+      Material: "Polycarbonate Lenses, Metal Frame",
+      Protection: "UV400",
+      FrameWidth: "140mm",
+      LensWidth: "58mm",
     },
-  ];
+  },
+];
 
 const Shop = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -205,7 +205,9 @@ const Shop = () => {
           <Star
             key={i}
             className={`h-4 w-4 ${
-              i < Math.round(rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+              i < Math.round(rating)
+                ? "fill-yellow-400 text-yellow-400"
+                : "text-gray-300"
             }`}
           />
         ))}
@@ -334,72 +336,81 @@ const Shop = () => {
               key={product.id}
               className="group overflow-hidden hover:shadow-lg transition-all duration-300"
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <Link to={`/product/${product.id}`}>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
 
-                {/* Discount Badge */}
-                {product.originalPrice && (
-                  <Badge className="absolute top-2 left-2 bg-red-500 text-white">
-                    -
-                    {Math.round(
-                      ((product.originalPrice - product.price) /
-                        product.originalPrice) *
-                        100
-                    )}
-                    %
-                  </Badge>
-                )}
+                  {/* Discount Badge */}
+                  {product.originalPrice && (
+                    <Badge className="absolute top-2 left-2 bg-red-500 text-white">
+                      -
+                      {Math.round(
+                        ((product.originalPrice - product.price) /
+                          product.originalPrice) *
+                          100
+                      )}
+                      %
+                    </Badge>
+                  )}
 
-                {/* Quick Actions */}
-                <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all">
-                  <Button size="icon" variant="secondary" className="shadow-md">
-                    <Heart className="h-4 w-4" />
-                  </Button>
-                  <Button size="icon" variant="secondary" className="shadow-md">
-                    <Eye className="h-4 w-4" />
-                  </Button>
+                  {/* Quick Actions */}
+                  <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all">
+                    <Button
+                      size="icon"
+                      variant="secondary"
+                      className="shadow-md"
+                    >
+                      <Heart className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      size="icon"
+                      variant="secondary"
+                      className="shadow-md"
+                    >
+                      <Eye className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
-              </div>
 
-              <CardContent className="p-4 space-y-2">
-                <Badge variant="secondary" className="text-xs">
-                  {product.category}
-                </Badge>
-                <Link to={`/product/${product.id}`}>
+                <CardContent className="p-4 space-y-2">
+                  <Badge variant="secondary" className="text-xs">
+                    {product.category}
+                  </Badge>
+
                   <h3 className="font-semibold line-clamp-2 hover:text-primary transition-colors">
                     {product.name}
                   </h3>
-                </Link>
 
-                {/* Rating */}
-                <div className="flex items-center gap-2">
-                  {renderStars(product.rating)}
-                  <span className="text-sm text-muted-foreground">
-                    ({product.reviews})
-                  </span>
-                </div>
-
-                {/* Price */}
-                <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold">${product.price}</span>
-                  {product.originalPrice && (
-                    <span className="text-sm text-muted-foreground line-through">
-                      ${product.originalPrice}
+                  {/* Rating */}
+                  <div className="flex items-center gap-2">
+                    {renderStars(product.rating)}
+                    <span className="text-sm text-muted-foreground">
+                      ({product.reviews})
                     </span>
-                  )}
-                </div>
-              </CardContent>
+                  </div>
 
-              <CardFooter className="p-4 pt-0">
-                <Button variant="cart" className="w-full">
-                  <ShoppingCart className="mr-2 h-4 w-4" />
-                  Add to Cart
-                </Button>
-              </CardFooter>
+                  {/* Price */}
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl font-bold">${product.price}</span>
+                    {product.originalPrice && (
+                      <span className="text-sm text-muted-foreground line-through">
+                        ${product.originalPrice}
+                      </span>
+                    )}
+                  </div>
+                </CardContent>
+
+                <CardFooter className="p-4 pt-0">
+                  <Button variant="cart" className="w-full">
+                    <ShoppingCart className="mr-2 h-4 w-4" />
+                    Add to Cart
+                  </Button>
+                </CardFooter>
+              </Link>
             </Card>
           ))}
         </div>
