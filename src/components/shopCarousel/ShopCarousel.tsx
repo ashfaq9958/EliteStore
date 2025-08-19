@@ -17,7 +17,7 @@ export default function ShopCarousel({ heroImages }) {
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
-        autoplay={{ delay: 3500, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         loop
         className="absolute inset-0 w-full h-full"
@@ -36,7 +36,7 @@ export default function ShopCarousel({ heroImages }) {
               className={`absolute inset-0 ${
                 theme === "light"
                   ? "bg-gradient-to-b from-black/40 via-black/30 to-black/50"
-                  : "bg-gradient-to-b from-black/70 via-black/60 to-black/80"
+                  : "bg-gradient-to-b from-black/50 via-black/60 to-black/80"
               }`}
             />
 
