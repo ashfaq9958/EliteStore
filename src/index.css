@@ -129,9 +129,14 @@
 @layer base {
   * {
     @apply border-border;
+     @apply outline-none ring-0 focus:outline-none focus:ring-0;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  input, textarea, select {
+    @apply outline-none ring-0 focus:outline-none focus:ring-0;
   }
 }

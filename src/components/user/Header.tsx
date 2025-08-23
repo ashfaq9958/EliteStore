@@ -25,6 +25,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import { Dialog, DialogContent, DialogTitle } from "@radix-ui/react-dialog";
+import { DialogHeader } from "../ui/dialog";
+import Login from "@/pages/auth/Login";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +42,8 @@ const Header = () => {
     { name: "Contact", href: "/contact" },
     // { name: "FAQ", href: "/faq" },
   ];
+
+  const [open, setOpen] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -154,12 +159,15 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setOpen(true)}>
                   <LogIn className="h-4 w-4 mr-2 text-red-500" />
                   <span>Sign in</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
+            {/* Login Modal */}
+            <Login open={open} onOpenChange={setOpen} />
 
             {/* Mobile Menu Toggle */}
             <Button
