@@ -85,7 +85,7 @@ const Login = ({
                         <input
                           {...field}
                           placeholder="Username or Email"
-                          className="h-11 sm:h-12 w-full pr-10 sm:pr-12 pl-4 sm:pl-5 text-sm sm:text-base text-gray-200 bg-gray-900/70 border border-gray-700 rounded-xl shadow-inner focus:border-purple-500 focus:ring-0 focus:ring-purple-600 focus:outline-none transition-all"
+                          className="h-11 sm:h-12 w-full pr-10 sm:pr-12 pl-4 sm:pl-5 text-sm sm:text-base text-gray-200 bg-gray-900/70 border border-gray-700 rounded-sm shadow-inner focus:border-purple-500 focus:ring-0 focus:ring-purple-600 focus:outline-none transition-all"
                         />
                         <User className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-4 sm:w-5 h-4 sm:h-5 text-gray-400 pointer-events-none" />
                       </div>
@@ -107,7 +107,7 @@ const Login = ({
                           {...field}
                           type={visible ? "text" : "password"}
                           placeholder="••••••••"
-                          className="h-11 sm:h-12 w-full pr-10 sm:pr-12 pl-4 sm:pl-5 text-sm sm:text-base text-gray-200 bg-gray-900/70 border border-gray-700 rounded-xl shadow-inner focus:border-purple-500 focus:ring-0 focus:ring-purple-600 focus:outline-none transition-all"
+                          className="h-11 sm:h-12 w-full pr-10 sm:pr-12 pl-4 sm:pl-5 text-sm sm:text-base text-gray-200 bg-gray-900/70 border border-gray-700 rounded-sm shadow-inner focus:border-purple-500 focus:ring-0 focus:ring-purple-600 focus:outline-none transition-all"
                         />
                         <button
                           type="button"
@@ -142,7 +142,7 @@ const Login = ({
                 type="submit"
                 variant="ghost"
                 disabled={loading}
-                className="w-full h-11 sm:h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl text-sm sm:text-base text-white font-semibold transition-all duration-200"
+                className="w-full h-11 sm:h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-sm text-sm sm:text-base text-white font-semibold transition-all duration-200"
               >
                 {loading ? (
                   <Loader2 className="w-4 sm:w-5 h-4 sm:h-5 animate-spin" />
