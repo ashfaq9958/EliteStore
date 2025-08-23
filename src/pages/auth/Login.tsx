@@ -163,18 +163,18 @@ const Login = ({
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <Button
                   type="button"
-                  variant="ghost"
-                  className="h-10 sm:h-11 rounded-xl border-white/10 bg-white/5 backdrop-blur-md text-xs sm:text-sm text-gray-200 hover:bg-white/10 hover:border-purple-400/30 transition-all group"
+                  variant="outline"
+                  className="h-12 rounded-xl border-border bg-background/50 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/50 transition-all duration-300 group"
                 >
-                  <Chrome className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                  <Chrome className="w-5 h-5 text-muted-foreground group-hover:text-primary mr-2 transition-colors" />
                   Google
                 </Button>
                 <Button
                   type="button"
-                  variant="ghost"
-                  className="h-10 sm:h-11 rounded-xl border-white/10 bg-white/5 backdrop-blur-md text-xs sm:text-sm text-gray-200 hover:bg-white/10 hover:border-purple-400/30 transition-all group"
+                  variant="outline"
+                  className="h-12 rounded-xl border-border bg-background/50 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/50 transition-all duration-300 group"
                 >
-                  <Github className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                  <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary mr-2 transition-colors" />
                   GitHub
                 </Button>
               </div>
