@@ -25,9 +25,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { Dialog, DialogContent, DialogTitle } from "@radix-ui/react-dialog";
-import { DialogHeader } from "../ui/dialog";
 import Login from "@/pages/auth/Login";
+import RegisterForm from "@/pages/auth/Register";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

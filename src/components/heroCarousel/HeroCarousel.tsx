@@ -19,7 +19,7 @@ export default function HeroCarousel({ theme, heroImages }) {
         loop
         className="absolute inset-0 w-full h-full"
       >
-        {heroImages.map((img, idx) => (
+        {heroImages.map((img: any, idx: number) => (
           <SwiperSlide key={idx} className="relative">
             {/* Background Image */}
             <img
